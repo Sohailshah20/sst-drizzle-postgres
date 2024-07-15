@@ -1,0 +1,23 @@
+{
+	"name": "@sst-postgres/core",
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"test": "sst bind vitest",
+		"typecheck": "tsc -noEmit",
+		"generate": "npx drizzle-kit generate",
+		"migrate": "npx drizzle-kit migrate"
+	},
+	"devDependencies": {
+		"@types/node": "^18.11.18",
+		"drizzle-kit": "^0.22.8",
+		"typescript": "^5.5.3"
+	},
+	"dependencies": {
+		"dotenv": "^16.4.5",
+		"drizzle-orm": "^0.31.4",
+		"drizzle-zod": "^0.5.1",
+		"postgres": "^3.4.4",
+		"zod": "^3.23.8"
+	}
+}

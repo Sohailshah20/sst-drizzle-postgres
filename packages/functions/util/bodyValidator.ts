@@ -1,5 +1,7 @@
-export const bodyValidator = (schema) => ({
-	before: (handler) => {
+import { z } from "zod";
+
+export const bodyValidator = (schema: z.Schema) => ({
+	before: (handler: { event: { body: any } }) => {
 		const { body } = handler.event;
 		if (!body) {
 			throw new Error("empty request body!");
